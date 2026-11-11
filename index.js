@@ -8,6 +8,11 @@ const MongoClient = require("mongodb").MongoClient;
 let ObjectId = require("mongodb").ObjectID;
 const uri = "mongodb+srv://camilopinznn_db_user:VeJnLoNlhNKdOu5n@cluster0.nmpulq8.mongodb.net/";
 
+// configuración CORS
+var cors = require("cors");
+app.use(cors());
+
+
 // Inicia la conexión a la base de datos
 MongoClient.connect(uri, { useUnifiedTopology: true })
   .then((client) => {
